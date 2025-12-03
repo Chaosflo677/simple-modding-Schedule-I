@@ -5,13 +5,14 @@ using UnityEngine.Events;
 using System;
 namespace simple_modding
 {
-    public class Class1:MelonPlugin
+    public class Class1 : MelonPlugin
     {
         public override void OnInitializeMelon()
         {
             MelonLogger.Msg("Simple Modding Loaded");
         }
-        internal class Interaction : MelonPlugin
+    }
+        public class Interaction : MelonPlugin
         {
             public static void New_interaction(string Gameobject, string message, Action InteractedWith)
             {
@@ -34,5 +35,5 @@ namespace simple_modding
                 gameobjectInteraction.interactionState = InteractableObject.EInteractableState.Label;
             }
         }
-    }
+    
 }
